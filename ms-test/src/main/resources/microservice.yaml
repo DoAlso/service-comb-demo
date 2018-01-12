@@ -31,7 +31,13 @@ cse:
   handler:
     chain:
       Provider:
-        default: bizkeeper-provider
+        default: bizkeeper-provider,loadbalance
+  isolation:
+      Consumer:
+        enable: false
+  references:
+    msaccount:
+      version-rule: latest
 
 servicecomb:
   metrics:

@@ -25,15 +25,12 @@ public class UserController extends BaseController{
     private UserService userService;
 
 
-    @PostMapping("/login")
-    public BaseEntity login(@RequestBody BaseParams<LoginParam> baseParams) throws Exception{
-        LoginParam loginParam = baseParams.getData();
-        User user = userService.findUser(loginParam.getAccount());
+    @PostMapping("/getUser")
+    public BaseEntity getUser(@RequestBody BaseParams<Long> baseParams) throws Exception{
+        Long userId = baseParams.getData();
+        User user = userService.findUserById(userId);
         if(user == null){
-            throw new CustomException("账户不存在！");
-        }
-        if(!MD5HashUtil.toMD5(loginParam.getPassword()).equals(user.getuPassword())){
-            throw new CustomException("密码错误！");
+            throw new CustomException("用户不存在！");
         }
         return initBaseEntityResponse(Constants.HttpConstants.OK, "success", user);
     }

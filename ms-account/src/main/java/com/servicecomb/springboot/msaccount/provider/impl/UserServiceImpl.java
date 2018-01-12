@@ -18,4 +18,9 @@ public class UserServiceImpl implements UserService {
     public User findUser(String account) {
         return userMapper.selectUserByAccount(account);
     }
+
+    @Override
+    public User findUserById(Long userId) {
+        return userMapper.selectByPrimaryKey(userId);
+    }
 }
