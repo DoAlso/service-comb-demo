@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.servicecomb.springboot</groupId>
+	<artifactId>servicecomb-springboot</artifactId>
+	<version>0.0.1</version>
+	<packaging>pom</packaging>
+
+	<name>servicecomb-springboot</name>
+	<description>Demo project for Spring Boot</description>
+
+	<modules>
+		<module>ms-account</module>
+		<module>ms-gateway</module>
+		<module>ms-config</module>
+		<module>ms-security</module>
+		<module>ms-test</module>
+		<module>ms-cache</module>
+	</modules>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+		<spring-boot.version>1.5.9.RELEASE</spring-boot.version>
+		<service-comb.version>0.5.0</service-comb.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>io.servicecomb</groupId>
+				<artifactId>java-chassis-dependencies</artifactId>
+				<version>${service-comb.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.data</groupId>
+				<artifactId>spring-data-releasetrain</artifactId>
+				<version>Fowler-SR2</version>
+				<scope>import</scope>
+				<type>pom</type>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>${spring-boot.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+</project>
