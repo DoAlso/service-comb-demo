@@ -4,6 +4,7 @@ import com.microservice.common.mscommon.bean.BaseEntity;
 import com.microservice.common.mscommon.bean.BaseParams;
 import com.microservice.common.mscommon.util.FastJsonUtil;
 import com.servicecomb.springboot.mstest.comsumer.UserServiceClient;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,7 @@ public class MsTestApplicationTests {
 		BaseParams<Long> baseParams = new BaseParams<>();
 		baseParams.setData(1l);
 		BaseEntity baseEntity = userServiceClient.getUserService(baseParams);
-		System.out.println(FastJsonUtil.toJSONString(baseEntity));
+		Assert.assertEquals(baseEntity.getMessage(),"success");
 	}
 
 }

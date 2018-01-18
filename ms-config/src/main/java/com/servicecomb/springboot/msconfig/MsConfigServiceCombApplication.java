@@ -1,6 +1,6 @@
 package com.servicecomb.springboot.msconfig;
 
-import io.servicecomb.springboot.starter.provider.EnableServiceComb;
+import org.apache.servicecomb.springboot.starter.provider.EnableServiceComb;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

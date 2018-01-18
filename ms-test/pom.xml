@@ -14,7 +14,7 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <artifactId>spring-boot-starter</artifactId>
             <exclusions>
                 <exclusion>
                     <groupId>org.slf4j</groupId>
@@ -24,34 +24,21 @@
         </dependency>
 
         <dependency>
-            <!--让服务运行于微服务sdk容器中-->
-            <groupId>io.servicecomb</groupId>
+            <groupId>org.apache.servicecomb</groupId>
             <artifactId>spring-boot-starter-provider</artifactId>
         </dependency>
-        <dependency>
-            <!--使用服务中心-->
-            <groupId>io.servicecomb</groupId>
-            <artifactId>spring-boot-starter-discovery</artifactId>
-        </dependency>
-        <dependency>
-            <!--让服务运行于Spring boot embedded tomcat中-->
-            <groupId>io.servicecomb</groupId>
-            <artifactId>spring-boot-starter-transport</artifactId>
-        </dependency>
 
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-feign</artifactId>
+            <groupId>org.apache.servicecomb</groupId>
+            <artifactId>handler-flowcontrol-qps</artifactId>
         </dependency>
-
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-hystrix</artifactId>
+            <groupId>org.apache.servicecomb</groupId>
+            <artifactId>handler-bizkeeper</artifactId>
         </dependency>
-
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-ribbon</artifactId>
+            <groupId>org.apache.servicecomb</groupId>
+            <artifactId>handler-tracing-zipkin</artifactId>
         </dependency>
 
         <dependency>
